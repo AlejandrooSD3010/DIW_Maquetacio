@@ -1,0 +1,466 @@
+/* Variables globals */
+:root {
+  --color-fons: #f2f2f2;
+  --color-nav: #2b2b2b;
+  --color-accent: #c0392b;
+}
+
+/* Estils generals */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  background-color: var(--color-fons);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Navbar fixa a la part superior */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  z-index: 100;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Links del navbar en fila */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid #cccccc;
+  display: block;
+}
+
+/* Subratlla el link al passar el ratolí */
+.nav-links li a:hover {
+  text-decoration: underline;
+  background-color: #eeeeee;
+}
+
+/* Capçalera amb imatge i text al damunt */
+.hero {
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+/* Imatge que ocupa tota l'amplada */
+.hero-img {
+  width: 100%;
+  height: 20rem;
+  display: block;
+}
+
+/* Text posicionat sobre la imatge */
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 1rem 1.25rem;
+}
+
+.hero-text h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-text p {
+  font-size: 0.9375rem;
+}
+
+/* Contenidor de cada secció */
+.section {
+  padding: 2.5rem 2rem;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+/* Fila de la secció sobre nosaltres */
+.sobre-fila {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+}
+
+/* Inverteix l'ordre de la fila */
+.sobre-fila--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Imatges amb cantonades arrodonides */
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.sobre-img {
+  width: 13rem;
+  height: 9rem;
+  flex-shrink: 0;
+}
+
+.sobre-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* Grid de la carta */
+.carta-grid {
+  display: grid;
+  grid-template-areas:
+    "carta-header  carta-header"
+    "menu1-label   menu1-bloc"
+    "menu2-label   menu2-bloc";
+  grid-template-columns: 5rem 1fr;
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+
+/* Capçalera del menú */
+.carta-header {
+  grid-area: carta-header;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.menu1-label { grid-area: menu1-label; }
+.menu2-label { grid-area: menu2-label; }
+
+/* Etiquetes laterals Menú 1 i Menú 2 */
+.carta-label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.menu1-bloc { grid-area: menu1-bloc; }
+.menu2-bloc { grid-area: menu2-bloc; }
+
+.carta-bloc {
+  border-bottom: 1px solid #cccccc;
+  padding: 1rem;
+}
+
+.carta-content {
+  margin-bottom: 1rem;
+}
+
+.carta-content p {
+  font-size: 0.8125rem;
+  color: #666666;
+}
+
+/* Imatges del menú en fila */
+.carta-fotos {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Contenidor per posar el text sobre la imatge */
+.carta-img-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.carta-img {
+  width: 100%;
+  height: 8rem;
+  display: block;
+  border: 1px solid #cccccc;
+}
+
+/* Text a la part inferior de la imatge */
+.carta-img-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 0.25rem 0;
+}
+
+/* Galeria d'imatges en fila que salten de línia */
+.galeria-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Border de cada imatge */
+.galeria-item {
+  border: 2px solid #bbbbbb;
+}
+
+.galeria-item img {
+  width: 12rem;
+  height: 8rem;
+  display: block;
+}
+
+/* Imatges mes fosques per defecte */
+.galeria-item.dark-default img {
+  opacity: 0.45;
+}
+
+/* Canvia el border i la foscor al passar el ratolí */
+.galeria-item:hover {
+  border-color: var(--color-accent);
+}
+
+.galeria-item:hover img {
+  opacity: 0.3;
+}
+
+/* Formulari de reserva */
+.form-container {
+  max-width: 42rem;
+}
+
+/* Grid de dues columnes per als camps */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Camp que ocupa les dues columnes */
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+/* Alinea el boto a la dreta */
+.form-group--right {
+  align-items: flex-end;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+  font-size: 0.9375rem;
+  border: 1px solid #cccccc;
+  padding: 0.4rem 0.6rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Boto de reserva del formulari */
+.btn-submit {
+  font-size: 0.9375rem;
+  background-color: white;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 0.4rem 1.25rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #eeeeee;
+}
+
+/* Footer amb contacte i logotip */
+.footer {
+  background-color: white;
+  color: #333333;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #cccccc;
+}
+
+/* Reparteix el contingut del footer */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+/* Links de contacte en fila */
+.footer-contact {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Mida de les icones */
+.material-symbols-outlined {
+  font-size: 1.25rem;
+}
+
+.footer-img {
+  width: 4rem;
+  height: 3rem;
+  border: 1px solid #cccccc;
+}
+
+/* Boto flotant sempre visible a baix a la dreta */
+.btn-reservar-flotant {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: white;
+  color: #333333;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  z-index: 99;
+}
+
+.btn-reservar-flotant:hover {
+  background-color: #eeeeee;
+}
+
+/* Adaptacio per pantalles petites */
+@media (max-width: 48rem) {
+
+  .hero-img {
+    height: 14rem;
+  }
+
+  .hero-text {
+    left: 1rem;
+    max-width: 90%;
+  }
+
+  /* Apila les files en columna */
+  .sobre-fila,
+  .sobre-fila--reverse {
+    flex-direction: column;
+  }
+
+  .sobre-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Carta en una sola columna */
+  .carta-grid {
+    grid-template-areas:
+      "carta-header"
+      "menu1-label"
+      "menu1-bloc"
+      "menu2-label"
+      "menu2-bloc";
+    grid-template-columns: 1fr;
+  }
+
+  .carta-label {
+    border-right: none;
+    padding: 0.5rem 1rem;
+    justify-content: flex-start;
+    background-color: #f5f5f5;
+  }
+
+  /* Formulari en una sola columna */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer en columna */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 30rem) {
+
+  /* Imatges mes petites */
+  .galeria-item img {
+    width: 9rem;
+    height: 6rem;
+  }
+
+  .carta-fotos {
+    flex-direction: column;
+  }
+}
