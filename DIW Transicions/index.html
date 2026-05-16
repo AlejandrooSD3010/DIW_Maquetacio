@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant els Coberts</title>
+  <!-- Icona de la pestanya -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+  <!-- Icones de Google Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navegació fixa -->
+  <!-- Ex5: el JS afegirà la classe navbar--shrink en fer scroll -->
+  <nav class="navbar" id="navbar" aria-label="Navegació principal">
+    <ul class="nav-links" role="list">
+      <li><a href="#nosaltres">Nosaltres</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <!-- Capçalera amb imatge i text al damunt -->
+  <!-- Ex2.1: .hero-text té l'animació apareixerText definida al CSS -->
+  <header class="hero" role="banner">
+    <img
+      src="fotos/hero.jpg"
+      alt="Interior del Restaurant els Coberts"
+      class="hero-img"
+    />
+    <!-- Text sobre la imatge: l'animació CSS el fa aparèixer pujant de taronja a blanc -->
+    <div class="hero-text">
+      <h1>Restaurant els <strong>Coberts</strong></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </header>
+
+  <!-- Secció sobre nosaltres -->
+  <section id="nosaltres" class="section" aria-labelledby="titol-nosaltres">
+    <h2 id="titol-nosaltres">Sobre nosaltres</h2>
+
+    <!-- Imatge esquerra, text dreta -->
+    <div class="sobre-fila">
+      <img
+        src="fotos/sobre1.jpg"
+        alt="Sala del restaurant"
+        class="sobre-img rounded"
+      />
+      <p class="sobre-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <!-- Text esquerra, imatge dreta -->
+    <div class="sobre-fila sobre-fila--reverse">
+      <p class="sobre-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <img
+        src="fotos/sobre2.jpg"
+        alt="Cuina del restaurant"
+        class="sobre-img rounded"
+      />
+    </div>
+  </section>
+
+  <!-- Secció carta -->
+  <section id="carta" class="section" aria-labelledby="titol-carta">
+    <h2 id="titol-carta">Carta</h2>
+
+    <!-- Grid de la carta (tots els elements menys el títol) -->
+    <div class="carta-grid">
+
+      <!-- Capçalera del menú -->
+      <div class="carta-header">
+        <span>Menú</span>
+      </div>
+
+      <!-- Etiqueta Menú 1 -->
+      <div class="carta-label menu1-label">Menú 1</div>
+
+      <!-- Contingut i imatges del Menú 1 -->
+      <div class="carta-bloc menu1-bloc">
+        <div class="carta-content">
+          <h4>Contingut</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <!-- Imatges amb text a sota -->
+        <div class="carta-fotos">
+          <div class="carta-img-wrap">
+            <img src="fotos/pasta.jpg" alt="Pasta" class="carta-img" />
+            <span class="carta-img-label">pasta</span>
+          </div>
+          <div class="carta-img-wrap">
+            <img src="fotos/entrants.jpg" alt="Entrants" class="carta-img" />
+            <span class="carta-img-label">entrants</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etiqueta Menú 2 -->
+      <div class="carta-label menu2-label">Menú 2</div>
+
+      <!-- Contingut i imatges del Menú 2 -->
+      <div class="carta-bloc menu2-bloc">
+        <div class="carta-content">
+          <h4>Contingut</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <!-- Imatges amb text a sota -->
+        <div class="carta-fotos">
+          <div class="carta-img-wrap">
+            <img src="fotos/amanida.jpg" alt="Amanida" class="carta-img" />
+            <span class="carta-img-label">amanida</span>
+          </div>
+          <div class="carta-img-wrap">
+            <img src="fotos/peix.jpg" alt="Peix" class="carta-img" />
+            <span class="carta-img-label">peix</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Secció galeria -->
+  <!-- Ex1.1: les imatges de la galeria tenen transició (scale, rotate, grayscale) al hover -->
+  <section id="galeria" class="section" aria-labelledby="titol-galeria">
+    <h2 id="titol-galeria">Galeria d'imatges</h2>
+
+    <div class="galeria-flex">
+      <!-- Imatge 1 (fosca) -->
+      <!-- Ex1.1: .galeria-item té overflow:hidden per evitar que la imatge surti en fer scale/rotate -->
+      <div class="galeria-item dark-default">
+        <img src="fotos/galeria1.jpg" alt="Restaurant - imatge 1" />
+      </div>
+      <!-- Imatge 2 -->
+      <div class="galeria-item">
+        <img src="fotos/galeria2.jpg" alt="Restaurant - imatge 2" />
+      </div>
+      <!-- Imatge 3 -->
+      <div class="galeria-item">
+        <img src="fotos/galeria3.jpg" alt="Restaurant - imatge 3" />
+      </div>
+      <!-- Imatge 4 (fosca) -->
+      <div class="galeria-item dark-default">
+        <img src="fotos/galeria4.jpg" alt="Restaurant - imatge 4" />
+      </div>
+      <!-- Imatge 5 (fosca) -->
+      <div class="galeria-item dark-default">
+        <img src="fotos/galeria5.jpg" alt="Restaurant - imatge 5" />
+      </div>
+      <!-- Imatge 6 -->
+      <div class="galeria-item">
+        <img src="fotos/galeria6.jpg" alt="Restaurant - imatge 6" />
+      </div>
+      <!-- Imatge 7 -->
+      <div class="galeria-item">
+        <img src="fotos/galeria7.jpg" alt="Restaurant - imatge 7" />
+      </div>
+      <!-- Imatge 8 (fosca) -->
+      <div class="galeria-item dark-default">
+        <img src="fotos/galeria8.jpg" alt="Restaurant - imatge 8" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       Ex3 + Ex4 - SECCIÓ VÍDEO DEL RESTAURANT
+       Apartat nou després de la galeria
+       ============================================= -->
+  <section id="videos" class="section-video" aria-labelledby="titol-videos">
+    <h2 id="titol-videos">Vídeos del restaurant</h2>
+
+    <!-- Contenidor relatiu per superposar els controls sobre el vídeo -->
+    <div class="video-wrapper">
+
+      <!-- Ex3: vídeo HTML5 responsive, centrat, parat per defecte, silenciat, amb controls -->
+      <!-- Ex4: s'eliminen els controls natius (controls) i s'afegeixen els personalitzats -->
+      <!-- muted: silenciat per defecte | preload="metadata": carrega info bàsica sense baixar tot -->
+      <video
+        id="video-restaurant"
+        class="video-principal"
+        src="fotos/video-restaurant.mp4"
+        muted
+        preload="metadata"
+      >
+        El teu navegador no suporta l'element video.
+      </video>
+
+      <!-- Ex4: controls personalitzats sobre el vídeo, fons fosc i transparent -->
+      <!-- Les icones són de Google Material Symbols (play_circle, pause_circle, volume_up, volume_off) -->
+      <div class="video-controls" id="video-controls">
+        <!-- Icona play: el JS posarà el vídeo en marxa -->
+        <span class="material-symbols-outlined" id="btn-play" title="Reproduir">play_circle</span>
+        <!-- Icona pause: el JS pausarà el vídeo -->
+        <span class="material-symbols-outlined" id="btn-pause" title="Pausar">pause_circle</span>
+        <!-- Icona volum: el JS treurà el silenci -->
+        <span class="material-symbols-outlined" id="btn-volum" title="Activar volum">volume_up</span>
+        <!-- Icona silenci: el JS posarà en silenci -->
+        <span class="material-symbols-outlined" id="btn-silenci" title="Silenciar">volume_off</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Secció formulari de reserva -->
+  <!-- Ex1.2: el botó Reservar té la TRANSICIÓ PRÒPIA de 3 propietats (background-color, color, border-color) -->
+  <section id="reserva" class="section" aria-labelledby="titol-reserva">
+    <h2 id="titol-reserva">Reserva</h2>
+
+    <div class="form-container">
+      <div class="form-grid">
+        <!-- Camp nom -->
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" autocomplete="name" />
+        </div>
+
+        <!-- Camp número de persones -->
+        <div class="form-group">
+          <label for="persones">Número de persones</label>
+          <input type="number" id="persones" name="persones" min="1" max="20" />
+        </div>
+
+        <!-- Camp data -->
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" id="data" name="data" />
+        </div>
+
+        <!-- Camp hora -->
+        <div class="form-group">
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" />
+        </div>
+
+        <!-- Camp descripció, ocupa tota l'amplada -->
+        <div class="form-group form-group--full">
+          <label for="descripcio">Descripció</label>
+          <textarea id="descripcio" name="descripcio" rows="4"></textarea>
+        </div>
+
+        <!-- Botó de reserva alineat a la dreta -->
+        <!-- Ex1.2: transició pròpia de 3 propietats CSS definida al styles.css -->
+        <div class="form-group form-group--full form-group--right">
+          <button type="submit" class="btn-submit">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer amb logotip i contacte -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <!-- Logotip a l'esquerra -->
+      <div class="footer-logo">
+        <img
+          src="fotos/logo.jpg"
+          alt="Logo Restaurant els Coberts"
+          class="footer-img"
+        />
+      </div>
+
+      <!-- Contacte amb icones a la dreta -->
+      <div class="footer-contact">
+        <a href="mailto:exemple@exemple.com" class="footer-link" aria-label="Correu electrònic">
+          <span class="material-symbols-outlined">mail</span>
+          exemple@exemple.com
+        </a>
+        <a href="tel:9999999999" class="footer-link" aria-label="Telèfon">
+          <span class="material-symbols-outlined">call</span>
+          9999999999
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botó flotant per anar a la reserva -->
+  <!-- Ex2.2: aquest botó té l'animació de 4 frames i 3 propietats (pulsarBoto) definida al CSS -->
+  <a href="#reserva" class="btn-reservar-flotant" aria-label="Anar al formulari de reserva">
+    Reservar
+  </a>
+
+  <!-- =============================================
+       Ex4 + Ex5 - JAVASCRIPT
+       Ex4: controls personalitzats del vídeo (play, pause, volum, silenci)
+       Ex5: navbar que s'encongeix en fer scroll + autoplay vídeo en arribar-hi
+       ============================================= -->
+  <script>
+    /* ---- Ex4: Controls personalitzats del vídeo ---- */
+    var video    = document.getElementById('video-restaurant');
+    var btnPlay   = document.getElementById('btn-play');
+    var btnPause  = document.getElementById('btn-pause');
+    var btnVolum  = document.getElementById('btn-volum');
+    var btnSilenci = document.getElementById('btn-silenci');
+
+    /* Al seleccionar play: el vídeo es posa en marxa */
+    btnPlay.addEventListener('click', function() {
+      video.play();
+    });
+
+    /* Al seleccionar pause: el vídeo es pausa */
+    btnPause.addEventListener('click', function() {
+      video.pause();
+    });
+
+    /* Al seleccionar volum: s'activa el so */
+    btnVolum.addEventListener('click', function() {
+      video.muted = false;
+    });
+
+    /* Al seleccionar silenci: el vídeo es posa en silenci */
+    btnSilenci.addEventListener('click', function() {
+      video.muted = true;
+    });
+
+    /* ---- Ex5.1: Navbar que s'encongeix en fer scroll ---- */
+    var navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', function() {
+      /* Si l'usuari ha fet scroll més de 60px, s'afegeix la classe navbar--shrink */
+      /* La transició CSS (transition: padding 0.3s ease) fa que el canvi sigui suau */
+      if (window.scrollY > 60) {
+        navbar.classList.add('navbar--shrink');
+      } else {
+        navbar.classList.remove('navbar--shrink');
+      }
+    });
+
+    /* ---- Ex5.2: Autoplay del vídeo quan arriba a la secció de vídeo amb scroll ---- */
+    var seccioVideo = document.getElementById('videos');
+    var videoJaReproduint = false; /* Evita que es reprengui cada vegada que passa per la zona */
+
+    window.addEventListener('scroll', function() {
+      /* Obtenim la posició de la secció de vídeo respecte a la pantalla */
+      var rect = seccioVideo.getBoundingClientRect();
+
+      /* Si la secció és visible a la pantalla i el vídeo no s'ha reproduït ja */
+      if (rect.top < window.innerHeight && rect.bottom > 0 && !videoJaReproduint) {
+        videoJaReproduint = true;
+        video.play();
+      }
+    });
+  </script>
+
+</body>
+</html>
